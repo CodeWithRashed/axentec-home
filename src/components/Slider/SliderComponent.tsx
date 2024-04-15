@@ -23,7 +23,7 @@ export default function SliderComponent() {
     bulletActiveClass: "swiper-custom-bullet-active",
   };
   return (
-    <div>
+    <div className="container mx-auto overflow-hidden">
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination]}
