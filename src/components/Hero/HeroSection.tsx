@@ -12,6 +12,7 @@ const HeroSection = () => {
         <h1 className="text-right">INNOVATE, INTEGRATE</h1>
         <h1 className="text-left">INSPIRE</h1>
       </div>
+
     </div>
   );
 };

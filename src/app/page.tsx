@@ -16,10 +16,10 @@ export default function Home() {
       <section>
         <HeroSection/>
       </section>
-      <section className="h-[50vh]">
+      <section>
         <HeroCategoryCards/>
       </section>
-      <section className="h-[50vh]">
+      <section>
         <SolutionsSection/>
       </section>
       <section className="h-[50vh]">
