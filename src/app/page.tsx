@@ -13,25 +13,25 @@ export default function Home() {
       <nav className="fixed top-0 w-full h-36 z-50">
         <NavbarComponent/>
       </nav>
-      <section className="h-[50vh] bg-slate-200">
+      <section>
         <HeroSection/>
       </section>
-      <section className="h-[50vh] bg-slate-200">
+      <section className="h-[50vh]">
         <HeroCategoryCards/>
       </section>
-      <section className="h-[50vh] bg-slate-200">
+      <section className="h-[50vh]">
         <SolutionsSection/>
       </section>
-      <section className="h-[50vh] bg-slate-200">
+      <section className="h-[50vh]">
         <ProductsAndServices/>
       </section>
-      <section className="h-[50vh] bg-slate-200">
+      <section className="h-[50vh]">
         <BlogSection/>
       </section>
-      <section className="h-[50vh] bg-slate-200">
+      <section className="h-[50vh]">
         <ContactSection/>
       </section>
-      <section className="h-[50vh] bg-slate-200">
+      <section className="h-[50vh]">
         <FooterSection/>
       </section>
     </main>
