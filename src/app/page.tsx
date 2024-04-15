@@ -10,7 +10,7 @@ import SolutionsSection from "@/components/Solutions/SolutionsSection";
 export default function Home() {
   return (
     <main className="">
-      <nav className="fixed top-0 w-full h-36">
+      <nav className="fixed top-0 w-full h-36 z-50">
         <NavbarComponent/>
       </nav>
       <section className="h-[50vh] bg-slate-200">
