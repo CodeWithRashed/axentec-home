@@ -1,0 +1,12 @@
+@keyframes fadeUp {
+    from {
+      transform: translateY(10px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  .group:hover .dropdown-menu {
+    animation: fadeUp 0.4s ease;
+  }
