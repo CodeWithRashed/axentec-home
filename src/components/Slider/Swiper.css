@@ -1,17 +1,30 @@
+.swiper-pagination {
+  /* background-color: blue !important; */
+  /* margin-bottom: 100px !important; */
+}
+
 .swiper-pagination-bullet {
-  background: red;
-  width: 12px;
-  height: 12px;
+  background: white!important;
+  width: 12px!important;
+  height: 12px!important;
+  opacity: 0.15;
 }
 
 .swiper-pagination-bullet-active {
-  color: #fff;
-  background: green;
-  width: 12px;
-  height: 12px;
+  background: white!important;
+  width: 12px!important;
+  height: 12px!important;
 }
 
 
 .swiper-button-prev::after, .swiper-button-next::after{
-background: #000;
+background: #232428 !important;
+overflow:  hidden !important;
+font-size: 20px !important;
+display: flex;
+padding: 10px 20px;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+color:white;
 }

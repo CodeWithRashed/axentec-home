@@ -8,6 +8,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./Swiper.css";
+import Image from "next/image";
+
+//BANNER IMAGES
+import bannerImage1 from "../../assets/Images/hero/01.jpg";
+import bannerImage2 from "../../assets/Images/hero/02.jpg";
+import bannerImage3 from "../../assets/Images/hero/03.jpg";
 
 export default function SliderComponent() {
   const PaginationOptions = {
@@ -22,7 +28,7 @@ export default function SliderComponent() {
         // install Swiper modules
         modules={[Navigation, Pagination]}
         spaceBetween={0}
-        slidesPerView={1.1}
+        slidesPerView={1.05}
         centeredSlides={true}
         loop={true}
         navigation
@@ -32,14 +38,30 @@ export default function SliderComponent() {
           // bulletActiveClass: "swiper-custom-bullet-active",
           clickable: true,
         }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-        className="h-screen w-screen"
+
+        className="h-screen w-screen overflow-hidden"
       >
-        <SwiperSlide className="h-[500px] bg-red-400">Slide 1</SwiperSlide>
-        <SwiperSlide className="h-[500px] bg-green-400">Slide 2</SwiperSlide>
-        <SwiperSlide className="h-[500px] bg-yellow-400">Slide 3</SwiperSlide>
-        <SwiperSlide className="h-[500px] bg-orange-400">Slide 4</SwiperSlide>
+        <SwiperSlide className="">
+          <div className="w-full h-full relative">
+            <Image alt="banner-image" src={bannerImage1} fill className="object-cover" />
+            {/* CONTENT  */}
+            <div className="bg-red-400 left-0 top-60 text-white absolute">
+              <h1 className="text-3xl">Own The Future</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae voluptates adipisci sit voluptate veritatis ab iste earum ullam quia dolorem?</p>
+              <a href="#">Find Out More</a>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <div className="w-full h-full">
+            <Image alt="banner-image" src={bannerImage2} fill className="object-cover" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <div className="w-full h-full">
+            <Image alt="banner-image" src={bannerImage3} fill className="object-cover" />
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );
