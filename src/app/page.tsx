@@ -17,21 +17,18 @@ export default function Home() {
         <HeroSection/>
       </section>
       <section>
-        <HeroCategoryCards/>
-      </section>
-      <section>
         <SolutionsSection/>
       </section>
-      <section className="h-[50vh]">
+      <section>
         <ProductsAndServices/>
       </section>
-      <section className="h-[50vh]">
+      <section>
         <BlogSection/>
       </section>
-      <section className="h-[50vh]">
+      <section>
         <ContactSection/>
       </section>
-      <section className="h-[50vh]">
+      <section>
         <FooterSection/>
       </section>
     </main>

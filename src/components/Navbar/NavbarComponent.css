@@ -1,6 +1,6 @@
 @keyframes fadeUp {
     from {
-      transform: translateY(10px);
+      transform: translateY(20px);
     }
     to {
       transform: translateY(0);
@@ -8,5 +8,5 @@
   }
   
   .group:hover .dropdown-menu {
-    animation: fadeUp 0.4s ease;
+    animation: fadeUp 0.8s ease;
   }

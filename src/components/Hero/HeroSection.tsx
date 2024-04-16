@@ -1,4 +1,6 @@
+import HeroCategoryCards from "../HeroCategoryCards/HeroCategoryCards";
 import SliderComponent from "../Slider/SliderComponent";
+import TaglineComponent from "./TaglineComponent";
 
 const HeroSection = () => {
   return (
@@ -9,8 +11,12 @@ const HeroSection = () => {
 
       {/* TAGLINE */}
       <div className="bg-[#221e1f] text-white min-h-[280px] flex flex-col items-center">
-        <h1 className="text-right">INNOVATE, INTEGRATE</h1>
-        <h1 className="text-left">INSPIRE</h1>
+        <TaglineComponent />
+      </div>
+
+      {/* HERO CARDS */}
+      <div>
+        <HeroCategoryCards />
       </div>
 
     </div>
