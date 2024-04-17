@@ -1,4 +1,5 @@
 import BlogSection from "@/components/Blogs/BlogSection";
+import ClientPortfolio from "@/components/ClientPortfolio/ClientPortfolio";
 import ContactSection from "@/components/Contact/ContactSection";
 import FooterSection from "@/components/Footer/FooterSection";
 import HeroSection from "@/components/Hero/HeroSection";
@@ -18,6 +19,9 @@ export default function Home() {
       </section>
       <section>
         <SolutionsSection/>
+      </section>
+      <section>
+        <ClientPortfolio/>
       </section>
       <section>
         <ProductsAndServices/>

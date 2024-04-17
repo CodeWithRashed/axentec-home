@@ -16,57 +16,57 @@ import bannerImage2 from "../../assets/Images/hero/02.jpg";
 import bannerImage3 from "../../assets/Images/hero/03.jpg";
 
 export default function SliderComponent() {
-  const PaginationOptions = {
-    clickable: true,
-    type: "bullets",
-    bulletClass: "swiper-custom-bullet",
-    bulletActiveClass: "swiper-custom-bullet-active",
-  };
+const bannerImages = [{
+  image: bannerImage1,
+},
+{
+  image: bannerImage2,
+},
+{
+  image: bannerImage3,
+}]
+
   return (
     <div className="w-screen mx-auto overflow-hidden">
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination]}
         spaceBetween={0}
-        slidesPerView={1.05}
+        slidesPerView={1.07}
         centeredSlides={true}
         loop={true}
         navigation
         pagination={{
-          // type: "bullets",
-          // bulletClass: "swiper-custom-bullet",
-          // bulletActiveClass: "swiper-custom-bullet-active",
           clickable: true,
         }}
 
         className="h-screen w-screen overflow-hidden"
       >
-        <SwiperSlide className="">
-          <div className="w-full h-full relative">
-            <Image alt="banner-image" src={bannerImage1} fill className="object-cover" />
-            {/* CONTENT  */}
-            <div className="bg-red-400 left-0 top-60 text-white absolute">
-              <h1 className="text-3xl">Own The Future</h1>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae voluptates adipisci sit voluptate veritatis ab iste earum ullam quia dolorem?</p>
-              <a href="#">Find Out More</a>
+
+        {
+          bannerImages.map((image, index) =>(
+            <SwiperSlide key={index} className="">
+            <div className="w-full h-full relative">
+              <Image alt="banner-image" src={image.image} fill className="object-cover absolute w-full h-full top-0 left-0" />
+              {/* CONTENT  */}
+              <div className="text-white z-30 relative h-full w-full flex justify-center items-start flex-col">
+                <div className="w-[50%] space-y-4 ml-8">
+                  <h1 className="text-5xl">Own The Future</h1>
+                  <p>How can network modernization help communications service providers in their sustainability strategies?</p>
+                  <div>
+                    <a href="#" className="text-2xl">Find Out More <span className="bg-white text-black px-1 py-0">{`>`}</span></a>
+  
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <div className="w-full h-full">
-            <Image alt="banner-image" src={bannerImage2} fill className="object-cover" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <div className="w-full h-full">
-            <Image alt="banner-image" src={bannerImage3} fill className="object-cover" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <div className="w-full h-full">
-            <Image alt="banner-image" src={bannerImage3} fill className="object-cover" />
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+          ))
+        }
+      
+      
+      
+       
       </Swiper>
     </div>
   );
