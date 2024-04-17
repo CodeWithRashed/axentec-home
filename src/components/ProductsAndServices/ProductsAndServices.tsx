@@ -1,5 +1,14 @@
 "use client"
+import Image from "next/image";
 import { useState } from "react";
+import productBanner from "../../assets/Images/product/banner.jpeg"
+import google from "../../assets/Images/product/Apple.png"
+import microsoft from "../../assets/Images/product/Microsoft.png"
+import robi from "../../assets/Images/product/Robi.png"
+import Glyph from "../../assets/Images/product/Glyph.png"
+import FindOutMore from "../Shared/FindOutMore";
+
+
 
 const ProductsAndServices = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -8,8 +17,31 @@ const ProductsAndServices = () => {
     setTabIndex(tab);
   };
 
+  const textData = [
+    {
+      title: "Google Workspace",
+      image: google,
+      description: "Unleashing Productivity, Powering Collaboration."
+    },
+    {
+      title: "Microsoft Solutions",
+      image: microsoft,
+      description: "Elevate with Microsoft's Innovative Solutions."
+    },
+    {
+      title: "Robi Secure Connect",
+      image: robi,
+      description: "An efficient & secured point-to-point data connectivity between mobile devices or terminals via Robi network."
+    },
+    {
+      title: "Business Process Automation",
+      image: Glyph,
+      description: "Robi BPA helps organizational transformation that aims to drive efficiency, provide transparency and f"
+    },
+  ]
+
   return (
-    <div className="text-white my-20">
+    <div className="text-white my-20 container mx-auto">
       {/* SECTION HEADER */}
       <div className="space-y-6 flex flex-col justify-center items-center mb-8">
         <h1 className="text-4xl text-center font-bold">Products & Services</h1>
@@ -34,13 +66,40 @@ const ProductsAndServices = () => {
       </div>
 
       {/* TAB CONTENT */}
-      <div>
-        <div className={`bg-red-500 transition-opacity ${tabIndex === 0 ? "opacity-100 w-20 h-20" : "opacity-0 w-0 h-0"}`}>
-          
-        </div>
-        <div className={`bg-red-500 transition-opacity ${tabIndex === 1 ? "opacity-100 w-20 h-20" : "opacity-0 w-0 h-0"}`}>tab2</div>
-        <div className={`bg-red-500 transition-opacity ${tabIndex === 2 ? "opacity-100 w-20 h-20" : "opacity-0 w-0 h-0"}`}>tab3</div>
-        <div className={`bg-red-500 transition-opacity ${tabIndex === 3 ? "opacity-100 w-20 h-20" : "opacity-0 w-0 h-0"}`}>tab4</div>
+      <div className="overflow-hidden mt-8">
+        {[1, 2, 3, 4].map((_, index) => (
+
+          <div key={index} className={`transition-opacity overflow-hidden ${tabIndex === index ? "opacity-100 h-full w-full" : "opacity-0 w-0 h-0"} duration-500`}>
+            <div className="grid grid-cols-5 gap-5">
+              <div className="content col-span-2 w-full h-[80%] bg-gradient-to-tr from-[#3D0059] to-[#4D00B0] rounded-lg" >
+               <div className="mt-8">
+               {
+                  textData.map((data, index) => (
+                    <div key={index} className="flex gap-2 px-5 py-3">
+                      <div className="icon h-12 min-w-12">
+                        <Image alt="" src={data.image} width={48} height={48} className="h-12 w-12 object-contain"/>
+                      </div>
+
+                      <div className="content overflow-hidden">
+                        <h3 className="text-xl font-bold text-white">{data.title}</h3>
+                        <p className="truncate text-base text-white/80">{data.description}</p>
+                      </div>
+
+                    </div>
+                  ))
+                }
+
+                <FindOutMore className="flex justify-start items-start pl-5 mt-8"/>
+               </div>
+              </div>
+              <div className="image col-span-3 w-full h-[80%]  bg-red-500 rounded-lg" >
+                <Image alt="" src={productBanner} width={800} height={800} className="object-cover w-full h-full rounded-lg" />
+              </div>
+            </div>
+
+          </div>
+        ))}
+
       </div>
     </div>
   );
