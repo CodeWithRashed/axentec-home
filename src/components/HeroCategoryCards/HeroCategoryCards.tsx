@@ -70,15 +70,15 @@ const HeroCategoryCards = () => {
       {
         cardsData.map((cardItem, index) => (
           <div key={index}>
-              <div className={`w-full h-full overflow-hidden group relative`} style={{ backgroundColor: cardItem.backgroundColor }}>
+            <div className={`w-full h-full overflow-hidden group relative`} style={{ backgroundColor: cardItem.backgroundColor }}>
               <div className="absolute top-0 left-0 w-full h-full ">
-              
+
                 {cardItem?.image && <Image
-                  layout="fill"
+                  fill
                   src={cardItem?.image}
                   alt=""
                   className="object-cover w-full h-full group-hover:scale-125 group-hover:blur-2xl transition-all ease-in-out"
-                /> }
+                />}
 
               </div>
 
