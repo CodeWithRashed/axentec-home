@@ -1,3 +1,4 @@
+import About from "@/components/About/About";
 import BlogSection from "@/components/Blogs/BlogSection";
 import ClientPortfolio from "@/components/ClientPortfolio/ClientPortfolio";
 import ContactSection from "@/components/Contact/ContactSection";
@@ -12,28 +13,31 @@ export default function Home() {
   return (
     <main className="bg-[#000000]">
       <nav className="fixed top-0 w-full h-36 z-50">
-        <NavbarComponent/>
+        <NavbarComponent />
       </nav>
       <section>
-        <HeroSection/>
+        <HeroSection />
       </section>
       <section>
-        <SolutionsSection/>
+        <SolutionsSection />
       </section>
       <section>
-        <ClientPortfolio/>
+        <About />
       </section>
       <section>
-        <ProductsAndServices/>
+        <ClientPortfolio />
       </section>
       <section>
-        <BlogSection/>
+        <ProductsAndServices />
       </section>
       <section>
-        <ContactSection/>
+        <BlogSection />
       </section>
       <section>
-        <FooterSection/>
+        <ContactSection />
+      </section>
+      <section>
+        <FooterSection />
       </section>
     </main>
   );
